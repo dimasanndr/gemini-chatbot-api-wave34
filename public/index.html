@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Triva AI - Asisten Perjalanan Pribadi</title>
+  <title>TechBot AI - Konsultan Hardware Komputer & IT Gear</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -16,12 +16,12 @@
       <div class="bot-info">
         <div class="avatar-wrapper">
           <div class="avatar-glow"></div>
-          <div class="bot-avatar">✈️</div>
+          <div class="bot-avatar">🖥️</div>
           <span class="status-indicator"></span>
         </div>
         <div class="bot-details">
-          <h1 class="bot-name">Triva AI <span class="badge">Travel Specialist</span></h1>
-          <p class="bot-status"><span class="status-dot"></span> Online • Siap merancang liburan impian Anda</p>
+          <h1 class="bot-name">TechBot AI <span class="badge">Hardware & IT Specialist</span></h1>
+          <p class="bot-status"><span class="status-dot"></span> Online • Siap bantu rakit PC, pilih laptop & gear IT</p>
         </div>
       </div>
       <button id="reset-btn" class="reset-button" type="button" title="Mulai Obrolan Baru">
@@ -40,12 +40,12 @@
 
     <!-- Quick Suggestions -->
     <div id="suggestions" class="suggestions-container">
-      <span class="suggestion-label">Rekomendasi Liburan:</span>
+      <span class="suggestion-label">Rekomendasi Cepat:</span>
       <div class="suggestion-chips">
-        <button type="button" class="chip" data-text="Buatkan itinerary liburan ke Bali 4 hari 3 malam untuk 2 orang">🏝️ 4D3N di Bali</button>
-        <button type="button" class="chip" data-text="Rekomendasikan destinasi wisata seru & hidden gem di Yogyakarta 3 hari">🏛️ Hidden Gem Jogja</button>
-        <button type="button" class="chip" data-text="Rencanakan liburan petualangan ke Labuan Bajo 3 hari 2 malam">⛵ Adventure Labuan Bajo</button>
-        <button type="button" class="chip" data-text="Berapa estimasi budget dan itinerary santai ke Bandung 2 hari 1 malam?">☕ Weekend di Bandung</button>
+        <button type="button" class="chip" data-text="Rekomendasikan spek rakit PC gaming lengkap dengan budget 10 juta rupiah (price-to-performance)">🖥️ Rakit PC Gaming 10 Juta</button>
+        <button type="button" class="chip" data-text="Rekomendasikan laptop terbaik untuk software engineer/coding dan editing ringan budget 12-15 juta">💻 Laptop Coding 12-15 Juta</button>
+        <button type="button" class="chip" data-text="Apakah prosesor Intel i5-12400F cocok dengan RTX 4060? Butuh PSU berapa watt agar aman?">⚙️ Kompatibilitas CPU & GPU</button>
+        <button type="button" class="chip" data-text="Rekomendasikan setup periferal penunjang kerja IT (monitor 2K, keyboard mechanical, dan mouse ergonomis)">🖱️ Gear & Setup IT Ergonomis</button>
       </div>
     </div>
 
@@ -55,7 +55,7 @@
         <input 
           type="text" 
           id="user-input" 
-          placeholder="Tanya rencana liburan, kota tujuan, durasi, atau itinerary..." 
+          placeholder="Tanya spek rakit PC, laptop idaman, budget, upgrade hardware, atau gear IT..." 
           autocomplete="off" 
           required 
         />
@@ -69,7 +69,7 @@
     </form>
     
     <footer class="chat-footer">
-      <span>Didukung oleh Google Gemini • Khusus konsultasi travel & itinerary</span>
+      <span>Didukung oleh Google Gemini • Konsultasi Hardware, PC Building, Laptop & Kebutuhan IT</span>
     </footer>
   </div>
 

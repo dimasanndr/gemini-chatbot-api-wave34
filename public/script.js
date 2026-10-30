@@ -8,10 +8,12 @@ const chips = document.querySelectorAll('.chip');
 // Array riwayat percakapan yang dikirim ke backend
 let conversation = [];
 
-// Pesan pembuka / welcome message dari Triva
-const WELCOME_MESSAGE = `Halo travelers! 👋 Saya **Triva**, konsultan perjalanan pribadi Anda dengan pengalaman lebih dari 10 tahun ✈️🌴.
+// Pesan pembuka / welcome message dari TechBot
+const WELCOME_MESSAGE = `Halo tech enthusiasts & PC builders! 👋 Saya **TechBot**, konsultan spesialis hardware komputer, perakitan PC, laptop, dan perlengkapan IT Anda 🖥️⚡.
 
-Mau merencanakan liburan ke mana dan untuk berapa hari? Ceritakan impian liburan Anda atau klik salah satu rekomendasi cepat di bawah ini, dan saya siap buatkan itinerary lengkap serta tips terbaiknya! ✨`;
+Sedang mencari laptop baru, ingin merakit PC sesuai budget, berencana upgrade komponen, atau butuh rekomendasi gear penunjang kerja IT?
+
+Beritahu saya estimasi budget dan kebutuhan utama Anda (gaming, coding, video editing, rendering 3D, atau office), atau klik salah satu rekomendasi di bawah ini untuk memulai! 🚀💻`;
 
 // Inisialisasi awal obrolan
 function initChat() {
@@ -20,11 +22,14 @@ function initChat() {
   appendBotMessage(WELCOME_MESSAGE);
 }
 
-// Formatter Markdown sederhana (Bold, Italic, Headings, List, Newlines)
+// Formatter Markdown sederhana (Bold, Italic, Inline Code, Headings, List, Newlines)
 function formatMarkdown(text) {
   const div = document.createElement('div');
   div.textContent = text;
   let safe = div.innerHTML;
+
+  // Inline code (`code`)
+  safe = safe.replace(/`([^`]+)`/g, '<code class="tech-code">$1</code>');
 
   // Bold (**teks** atau __teks__)
   safe = safe.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -77,7 +82,7 @@ function appendBotMessage(text) {
 
   const avatar = document.createElement('div');
   avatar.className = 'msg-avatar';
-  avatar.textContent = '✈️';
+  avatar.textContent = '🖥️';
 
   const bubble = document.createElement('div');
   bubble.className = 'message-bubble';
@@ -90,20 +95,20 @@ function appendBotMessage(text) {
   return bubble;
 }
 
-// Tampilkan indikator "Thinking..." dengan animasi bouncing dots
+// Tampilkan indikator "Thinking..." dengan animasi bouncing tech dots
 function appendThinkingMessage() {
   const row = document.createElement('div');
   row.className = 'message-row bot';
 
   const avatar = document.createElement('div');
   avatar.className = 'msg-avatar';
-  avatar.textContent = '✈️';
+  avatar.textContent = '🖥️';
 
   const bubble = document.createElement('div');
   bubble.className = 'message-bubble';
   bubble.innerHTML = `
     <div class="typing-container">
-      <span>Triva sedang menyusun rencana...</span>
+      <span>TechBot sedang menganalisis spesifikasi & kompatibilitas...</span>
       <div class="typing-dots">
         <span></span>
         <span></span>
